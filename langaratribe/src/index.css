@@ -26,3 +26,8 @@ html {
 .grid {
   display: grid;
 }
+
+.iconBox {
+  display: flex;
+  gap: 0.5rem;
+}

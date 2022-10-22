@@ -34,11 +34,22 @@
 }
 
 .signUpReq {
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    gap: 8rem;
     text-align: center;
     font-size: 2rem;
     font-family: NotoJP;
     align-items: center;
     padding-right: 4rem;
     cursor: pointer;
+}
+
+.iconBox {
+    display: flex;
+    gap: 1rem;
+}
+
+.iconBox svg {
+    width: 4rem;
+    height: 4rem;
 }

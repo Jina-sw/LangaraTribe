@@ -1,4 +1,5 @@
 import './Nav.css';
+import { IoPersonOutline,IoTrailSignOutline } from "react-icons/io5"
 const Nav = () => {
 
     return (
@@ -7,10 +8,15 @@ const Nav = () => {
                 <p>Tribe.</p>
                 <p>Langara College.</p>
             </section>
-            <section className='grid signUpReq'>
-                <p>Log In</p>
-                <p>|</p>
-                <p>Sign Up</p>
+            <section className='signUpReq'>
+                <span className='iconBox'>
+                    <IoPersonOutline />
+                    <p>Log In</p>
+                </span>
+                <span className='iconBox'>
+                    <IoTrailSignOutline />
+                    <p>Sign Up</p>
+                </span>
             </section>
         </div>
     );
