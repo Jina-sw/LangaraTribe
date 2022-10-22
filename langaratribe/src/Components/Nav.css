@@ -1,0 +1,44 @@
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: #FEC89A;
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    padding: 2rem 8rem 2rem 4rem;
+    position: relative;
+}
+
+.logoContainer p {
+    letter-spacing: 0.2rem;
+    font-family: adelle, serif;
+    font-style: normal;
+}
+
+.logoContainer p:first-of-type {
+    font-size: 4rem;
+    color: white;
+}
+
+.logoContainer p:nth-last-of-type(1){
+    font-size: 1.2rem;
+    font-family: TheSans;
+    position: absolute;
+    bottom:1.4rem;
+    left: 4.4rem;
+}
+
+.signUpReq {
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    font-size: 2rem;
+    font-family: NotoJP;
+    align-items: center;
+    padding-right: 4rem;
+    cursor: pointer;
+}
