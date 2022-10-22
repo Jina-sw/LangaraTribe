@@ -23,6 +23,12 @@ html {
   src: url(Components/Fonts/NotoSansJP-Regular.otf)
 }
 
+@font-face {
+  font-family: adellebold;
+  src: url(Components/Fonts/Adelle_Bold.otf);
+  font-weight: 600;
+}
+
 .grid {
   display: grid;
 }
