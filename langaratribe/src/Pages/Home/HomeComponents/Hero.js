@@ -18,11 +18,11 @@ function Hero(props) {
             key = {icon.id}
             id = {icon.id}
             icon = {icon.icon}
-            desc = {icon.desc}
+            desc = {icon.descArray}
             setState = {props.setState}
         />
     ));
-    
+
     return (
         <div className="circleContainer">
             {iconList}
