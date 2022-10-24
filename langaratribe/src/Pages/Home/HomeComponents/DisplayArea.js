@@ -5,7 +5,7 @@ const DisplayArea = (props) => {
 
     array.map() << array[]
 
-    const function
+    const function top{
         array.map = (element) => {
             <div>{element}</div>
             if (element.id == "course") {
