@@ -1,82 +1,31 @@
-import { SiGoogleclassroom, SiAirtable, SiAlgolia, SiAmazons3, SiAndela } from "react-icons/si";
-
+import Circles from "./Circles";
 import "./Hero.css";
+
+// Component for Hero section of Home Page. This component will be handling all events and displayment of Hero section
 function Hero(props) {
-    // const array = ["course","chat","encyclopedia","clubs","news"];
+
+    //object literals used for creating icon circles. Might consider moving this to the backend or database
+    const icons = [
+        {id: "course", icon: "SiGoogleclassroom", descArray: "Course Information"},
+        {id: "chat", icon: "SiAirtable", descArray: "Chat Information"},
+        {id: "encyclopedia", icon: "SiAlgolia", descArray: "Encyclopedia Information"},
+        {id: "clubs", icon: "SiAmazons3", descArray: "Clubs Information"},
+        {id: "news", icon: "SiAndela", descArray: "News Information"}
+    ];
+    
+    const iconList = icons.map((icon) => (
+        <Circles
+            key = {icon.id}
+            id = {icon.id}
+            icon = {icon.icon}
+            desc = {icon.desc}
+            setState = {props.setState}
+        />
+    ));
     
     return (
         <div className="circleContainer">
-            <div className="iconFlex">
-                <div id="course"
-                    onMouseEnter={() => props.setState("course")}
-                    onMouseLeave={() => props.setState("default")}
-                >
-                    <SiGoogleclassroom className="heroIcons" />
-                </div>
-                <div className="heroDesc">
-                    <p className="heroText">
-                        Course Information
-                    </p>
-                    <p><span>Click Here!</span></p>
-                </div>
-            </div>
-            <div className="iconFlex">
-                <div id="chat"
-                    onMouseEnter={() => props.setState("chat")}
-                    onMouseLeave={() => props.setState("default")}
-                >
-                    <SiAirtable className="heroIcons" />
-                </div>
-                <div className="heroDesc">
-                    <p className="heroText">
-                        Course Information
-                    </p>
-                    <p><span>Click Here!</span></p>
-                </div>
-            </div>
-            <div className="iconFlex">
-                <div id="encyclopedia"
-                    onMouseEnter={() => props.setState("encyclopedia")}
-                    onMouseLeave={() => props.setState("default")}
-                >
-                    <SiAlgolia className="heroIcons" />
-                </div>
-                <div className="heroDesc">
-                    <p className="heroText">
-                        Course Information
-                    </p>
-                    <p><span>Click Here!</span></p>
-                </div>
-            </div>
-            <div className="iconFlex">
-                <div id="clubs"
-                    onMouseEnter={() => props.setState("clubs")}
-                    onMouseLeave={() => props.setState("default")}
-                >
-                    <SiGoogleclassroom className="heroIcons" />
-                </div>
-                <div className="heroDesc">
-                    <p className="heroText">
-                        Course Information
-                    </p>
-                    <p><span>Click Here!</span></p>
-                </div>
-            </div>
-            <div className="iconFlex">
-                <div id="news"
-                    onMouseEnter={() => props.setState("news")}
-                    onMouseLeave={() => props.setState("default")}
-                >
-                    <SiAmazons3 className="heroIcons" />
-                </div>
-                <div className="heroDesc">
-                    <p className="heroText">
-                        Course Information
-                    </p>
-                    <p><span>Click Here!</span></p>
-                </div>
-            </div>
-
+            {iconList}
         </div>
     );
 };
