@@ -1,0 +1,41 @@
+.circleContainer {
+    width: 90%;
+    background-color: #E8A598;
+    height: 30rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 3rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.iconFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.heroIcons {
+    height: 6rem;
+    width: 6rem;
+    cursor: pointer;
+
+    -webkit-transition: all 1s 0s ease;
+    -moz-transition: all 1s 0s ease;
+    -o-transition: all 1s 0s ease;
+    transition: all 1s 0s ease;
+}
+
+.heroIcons:hover {
+    color: white;
+    height: 10rem;
+    width: 10rem;
+}
+
+.heroDesc {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    letter-spacing: 0.2rem;
+}
