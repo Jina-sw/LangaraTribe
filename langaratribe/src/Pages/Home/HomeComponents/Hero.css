@@ -35,7 +35,17 @@
 }
 
 .heroDesc {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     line-height: 1.5;
     letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+.heroText {
+    font-size: 1.2rem;
+}
+
+.heroDesc span {
+    text-decoration: underline;
+    cursor: pointer;
 }

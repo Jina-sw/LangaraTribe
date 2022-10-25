@@ -6,11 +6,11 @@ function Hero(props) {
 
     //object literals used for creating icon circles. Might consider moving this to the backend or database
     const icons = [
-        {id: "course", icon: "SiGoogleclassroom", descArray: "Course Information"},
-        {id: "chat", icon: "SiAirtable", descArray: "Chat Information"},
-        {id: "encyclopedia", icon: "SiAlgolia", descArray: "Encyclopedia Information"},
-        {id: "clubs", icon: "SiAmazons3", descArray: "Clubs Information"},
-        {id: "news", icon: "SiAndela", descArray: "News Information"}
+        {id: "course", icon: "SiGoogleclassroom", descArray: "Course"},
+        {id: "chat", icon: "SiAirtable", descArray: "Chat"},
+        {id: "encyclopedia", icon: "SiAlgolia", descArray: "Encyclopedia"},
+        {id: "clubs", icon: "SiAmazons3", descArray: "Clubs"},
+        {id: "news", icon: "SiAndela", descArray: "News"}
     ];
     
     const iconList = icons.map((icon) => (

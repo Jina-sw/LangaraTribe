@@ -4,13 +4,32 @@ import { SiGoogleclassroom, SiAirtable, SiAlgolia, SiAmazons3, SiAndela } from "
 
 const Circles = (props) => {
 
+    let icon = "";
+    switch (props.icon){
+        case "SiGoogleclassroom" : 
+            icon = <SiGoogleclassroom className="heroIcons"/>;
+            break;
+        case "SiAirtable" : 
+            icon = <SiAirtable className="heroIcons"/>;
+            break;
+        case "SiAlgolia" : 
+            icon = <SiAlgolia className="heroIcons"/>;
+            break;
+        case "SiAmazons3" : 
+            icon = <SiAmazons3 className="heroIcons"/>;
+            break;
+        case "SiAndela" : 
+            icon = <SiAndela className="heroIcons"/>;
+            break;
+    }
+
     return (
         <div className="iconFlex">
             <div id={props.id}
                 onMouseEnter={() => props.setState(`${props.id}`)}
                 onMouseLeave={() => props.setState("default")}
             >
-                <SiGoogleclassroom className="heroIcons" />
+                {icon}
             </div>
             <div className="heroDesc">
                 <p className="heroText">
