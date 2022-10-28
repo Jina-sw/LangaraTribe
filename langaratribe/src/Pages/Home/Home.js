@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div>
             <Nav/>
-            <Hero setState={setState}/>
+            <Hero heroState={heroState} setState={setState}/>
         </div>
     );
 };

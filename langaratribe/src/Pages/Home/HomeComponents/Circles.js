@@ -1,41 +1,45 @@
 // Circles component for icon circles
 // Need to find out a way to return correct icons depending on the parameter passed through obj literal
 import { SiGoogleclassroom, SiAirtable, SiAlgolia, SiAmazons3, SiAndela } from "react-icons/si";
+import { HiGlobeAlt } from "react-icons/hi2";
+import { IoIosGlobe, IoMdBrush, IoMdGlobe, IoMdToday, IoIosAmericanFootball, IoIosChatboxes, IoMdLaptop, IoMdPaper } from "react-icons/io";
+import { HiAnnotation } from "react-icons/hi";
 
-const Circles = (props) => {
+import DisplayArea from "./DisplayArea";
 
-    let icon = "";
-    switch (props.icon){
-        case "SiGoogleclassroom" : 
-            icon = <SiGoogleclassroom className="heroIcons"/>;
+const Circles = ({ id,icon,desc,setState, heroState}) => {
+    //console.log(icons);
+
+    let iconS = "";
+    switch (icon){
+        case "IoMdLaptop" : 
+            iconS = <IoMdLaptop className="heroIcons"/>;
             break;
-        case "SiAirtable" : 
-            icon = <SiAirtable className="heroIcons"/>;
+        case "HiAnnotation" : 
+            iconS = <HiAnnotation className="heroIcons"/>;
             break;
-        case "SiAlgolia" : 
-            icon = <SiAlgolia className="heroIcons"/>;
+        case "IoIosAmericanFootball" : 
+            iconS = <IoIosAmericanFootball className="heroIcons"/>;
             break;
-        case "SiAmazons3" : 
-            icon = <SiAmazons3 className="heroIcons"/>;
-            break;
-        case "SiAndela" : 
-            icon = <SiAndela className="heroIcons"/>;
+        case "IoMdPaper" : 
+            iconS = <IoMdPaper className="heroIcons"/>;
             break;
     }
 
     return (
-        <div className="iconFlex">
-            <div id={props.id}
-                onMouseEnter={() => props.setState(`${props.id}`)}
-                onMouseLeave={() => props.setState("default")}
-            >
-                {icon}
-            </div>
-            <div className="heroDesc">
-                <p className="heroText">
-                    {props.desc}
-                </p>
-                <p><span>Click Here!</span></p>
+        <div className="bigContainer">
+            <div className="iconFlex">
+                <div id={id}
+                    onMouseEnter={() => setState(`${id}`)}   
+                >
+                {iconS}
+                </div>
+                <div className="heroDesc">
+                    <p className="heroText">
+                        {desc}
+                    </p>
+                    <p><span>Click Here!</span></p>
+                </div>
             </div>
         </div>
     );

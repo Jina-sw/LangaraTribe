@@ -1,3 +1,4 @@
+
 .circleContainer {
     width: 90%;
     background-color: #E8A598;
@@ -18,8 +19,8 @@
 }
 
 .heroIcons {
-    height: 6rem;
-    width: 6rem;
+    height: 7rem;
+    width: 7rem;
     cursor: pointer;
 
     -webkit-transition: all 1s 0s ease;

@@ -1,4 +1,26 @@
+import React, { useState } from 'react';
+import Video from './assetsComponent/Video';
+import course from './assets/course.jpg';
+import "./DisplayArea.css";
 
+function DisplayArea ({heroState}) {
+    //const arr = props.map((element) => `hello${element.id}`  ); 
+
+    console.log(`hello ${heroState}`);
+
+ 
+
+    
+
+    return (
+        <div>
+            <img src={course} className="img1"></img>
+             
+        </div>
+    )
+}
+
+/*
 const DisplayArea = (props) => {
 
     const array = ["1", "2", "3"];
@@ -50,4 +72,5 @@ const DisplayArea = (props) => {
     );
 };
 
+*/
 export default DisplayArea;
