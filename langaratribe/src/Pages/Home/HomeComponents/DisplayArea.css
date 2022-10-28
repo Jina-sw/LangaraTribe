@@ -1,6 +1,49 @@
+/**
+    Display Area CSS
+**/
 
-.img1 {
-    width: 50px;
-    height: 100px;
-    background: cover;
+.displayTemplate {
+    margin: 0 auto;
+    margin-top: 5rem;
+    width: 90%;
 }
+
+.header1 {
+    font-size: 5.6rem;
+    letter-spacing: 1rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
+}
+
+.header2 {
+    font-size: 1.8vw;
+    letter-spacing: 1px;
+}
+
+.header2 span {
+    font-size: 2.2vw;
+    color: #E8A598;
+}
+
+.frImg {
+    width: 100%;
+    height: auto;
+}
+
+.courseList {
+    margin-left: 2vw;
+    margin-top: 5vw;
+}
+
+.courseList li {
+    list-style: none;
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
+    letter-spacing: 0.5vw;
+}
+
+.courseList span {
+    color: #E8A598;
+}
+
+

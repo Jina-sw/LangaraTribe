@@ -1,6 +1,5 @@
 import Circles from "./Circles";
 import "./Hero.css";
-import DisplayArea from "./DisplayArea";
 
 
 // Component for Hero section of Home Page. This component will be handling all events and displayment of Hero section
@@ -22,7 +21,6 @@ function Hero(props) {
             icon = {icon.icon}
             desc = {icon.descArray}
             setState = {props.setState}
-            heroState = {props.heroState}
         />
     ));
 
@@ -30,9 +28,6 @@ function Hero(props) {
     <div>    
         <div className="circleContainer">
             {iconList}
-        </div>
-        <div className="template">
-            <DisplayArea heroState={heroState}/>
         </div>
     </div>
             

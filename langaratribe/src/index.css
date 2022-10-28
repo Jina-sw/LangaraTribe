@@ -1,3 +1,7 @@
+/*
+  General CSS
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +9,14 @@
   font-family: adelle;
 }
 
+/*
+  Fonts 
+*/
+
 html {
   font-size: 62.5%;
 }
+
 
 @font-face {
   font-family: adelle;
@@ -30,11 +39,45 @@ html {
   font-weight: 600;
 }
 
+/*
+  General Grid CSS
+*/
+
 .grid {
   display: grid;
 }
 
+.grid_col_2 {
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+
 .iconBox {
   display: flex;
   gap: 0.5rem;
+}
+
+.centerText {
+  text-align: center;
+}
+
+/**
+  Pre-defined measurement shortcut
+**/
+
+.gap_5 {
+  gap: 5rem; 
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.mt-5v {
+  margin-top: 5vw;
+}
+
+.ml-2v {
+  margin-left: 2vw;
 }
