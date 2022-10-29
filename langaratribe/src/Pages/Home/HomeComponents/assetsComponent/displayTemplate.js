@@ -27,4 +27,3 @@ export const course = (
     </div>
 );
 
-// export * as displayTemplate from "./displayTemplate";
