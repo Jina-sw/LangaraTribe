@@ -74,6 +74,10 @@ html {
   margin-top: 5rem;
 }
 
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
 .mt-5v {
   margin-top: 5vw;
 }
@@ -81,3 +85,8 @@ html {
 .ml-2v {
   margin-left: 2vw;
 }
+
+.mar0auto {
+  margin: 0 auto;
+}
+
