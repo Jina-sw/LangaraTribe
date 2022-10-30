@@ -49,7 +49,6 @@ html {
 
 .grid_col_2 {
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
 }
 
 
@@ -62,12 +61,40 @@ html {
   text-align: center;
 }
 
+.flex-3{
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
 /**
   Pre-defined measurement shortcut
 **/
 
 .gap_5 {
   gap: 5rem; 
+}
+
+.gap_3 {
+  gap: 3rem;
 }
 
 .mt-5 {
@@ -89,4 +116,5 @@ html {
 .mar0auto {
   margin: 0 auto;
 }
+
 

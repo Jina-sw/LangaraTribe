@@ -25,10 +25,33 @@
     color: #E8A598;
 }
 
+
+/**
+    Default Section
+**/
+
 .frImg {
     width: 100%;
     height: auto;
 }
+
+.defaultStateNumber{
+    font-size: 20vw;
+    font-weight: 800;
+    align-self: center;
+    justify-self: center;
+    color: #474e53;
+}
+
+.defaultStateText{
+    font-size: 2vw;
+    margin-top: 5vw;
+}
+
+
+/**
+    Course Section
+**/
 
 .courseList {
     margin-left: 2vw;
@@ -46,4 +69,80 @@
     color: #E8A598;
 }
 
+/**
+    Forum Section
+**/
 
+
+.card {
+    height: 40vw;
+    background-color: #fcd5ce;
+    width: 90%;
+    border-radius: 20%;
+    box-shadow: 1px 1px 1px #f9dcc4;
+    cursor: pointer;
+
+    -webkit-transition: all 1s 0s ease;
+    -moz-transition: all 1s 0s ease;
+    -o-transition: all 1s 0s ease;
+    transition: all 1s 0s ease;
+}
+
+.card:hover {
+    color: white;
+    background-color: #ffb5a7;
+    width: 95%;
+}
+
+.cardIcon {
+    display: flex;
+}
+
+.chatIcon {
+    margin: 5vw auto;
+    height: 10vw;
+    width: 10vw;
+}
+
+.cardHeader{
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.spacer {
+    width: 8vw;
+}
+
+.centerDec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.decIcon{
+    height: 1rem;
+    width: 1rem;
+}
+
+.line {
+    height: 3px;
+    background-color: black;
+    width: 80%;
+}
+
+.botDecGrid {
+    margin-top: 5vw;
+    grid-template-columns: 1fr 1.5fr 0.5fr 1.5fr 1fr;
+    font-size: 2.5vw;
+    justify-items: center;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+.linebreak {
+    margin: 0 auto;
+    margin-top: 3vw;
+}

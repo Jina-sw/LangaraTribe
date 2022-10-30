@@ -1,4 +1,4 @@
-import { course, defaultState } from './assetsComponent/displayTemplate';
+import { course, defaultState, Forum } from './assetsComponent/displayTemplate';
 import "./DisplayArea.css";
 
 
@@ -12,6 +12,9 @@ function DisplayArea (props) {
             break;
         case "course":
             displayed = course;
+            break;
+        case "forum":
+            displayed = Forum;
             break;
         default:
             displayed = defaultState;
