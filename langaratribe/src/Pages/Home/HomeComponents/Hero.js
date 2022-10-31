@@ -12,7 +12,6 @@ function Hero(props) {
         {id: "clubs", icon: "IoIosAmericanFootball", descArray: "Clubs"},
         {id: "news", icon: "IoMdPaper", descArray: "News"}
     ];
-    console.log(icons);
 
     const iconList = icons.map((icon) => (
         <Circles

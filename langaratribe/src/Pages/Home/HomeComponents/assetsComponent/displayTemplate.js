@@ -168,7 +168,7 @@ export const Forum = (
 
 export const Clubs = (
     <div>
-        <img src={clubs1} width="100%"></img>
+        <img src={clubs1} alt="Langara Club activity" width="100%"></img>
         <div className = "headContainer">
             <h2 className="option">Join Langara Clubs Online</h2>
             <div className="iconContainer">

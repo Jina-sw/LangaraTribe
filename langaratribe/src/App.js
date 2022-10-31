@@ -1,12 +1,22 @@
+import React, {useState} from 'react';
 import './App.css';
 import Home from './Pages/Home/Home';
 
-function App() {
+export const LoginContext = React.createContext('');
+
+export default function App() {
+
+  const [isLoggedIn, setLoggedIn] = useState(false);
+
+  function toggleLogIn() {
+    setLoggedIn(!isLoggedIn);
+  }
+
   return (
     <div className="App">
-      <Home></Home>
+      <LoginContext.Provider value={[isLoggedIn, setLoggedIn]}>
+        <Home></Home>
+      </LoginContext.Provider>
     </div>
   );
 }
-
-export default App;
