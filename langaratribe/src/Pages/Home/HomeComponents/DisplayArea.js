@@ -19,6 +19,9 @@ function DisplayArea (props) {
         case "clubs":
             displayed = Clubs;
             break;
+        case "news":
+            displayed = News;
+            break;
         default:
             displayed = defaultState;
             break;
