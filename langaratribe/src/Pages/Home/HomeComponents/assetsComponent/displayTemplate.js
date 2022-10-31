@@ -1,9 +1,13 @@
 import course1 from '../../../../Img/course1.png';
+import clubs1 from '../assets/clubs.jpg';
+import room from '../assets/room.jpg'
 import { IoChatbubblesSharp } from "react-icons/io5";
-import { BsFillSuitHeartFill } from "react-icons/bs";
+import { BsFillSuitHeartFill, BsFillDoorOpenFill, BsJoystick } from "react-icons/bs";
 import { AiFillQuestionCircle, AiOutlineQuestion } from "react-icons/ai";
 import { ImLoop, ImNext2, ImPlay2, ImPrevious2, ImShuffle } from "react-icons/im";
 import { FaPersonBooth } from "react-icons/fa";
+import { FcRight } from "react-icons/fc"
+
 
 export const course = (
     <div className='course'>
@@ -154,6 +158,50 @@ export const Forum = (
                 </div>
                 <div className='line linebreak'></div>
             </div>
+        </div>
+    </div>
+);
+
+
+//When all features are made, planning to put some screeshots to explain which is which feature. 
+//Connect proper components to icons and links later
+
+export const Clubs = (
+    <div>
+        <img src={clubs1} width="100%"></img>
+        <div className = "headContainer">
+            <h2 className="option">Join Langara Clubs Online</h2>
+            <div className="iconContainer">
+                <div className="gap">
+                    <div className="iconContent">
+                        <BsFillDoorOpenFill className = "clubIcons door"/>
+                        <p className="exp">Explore Existing Clubs</p>
+                    </div> 
+                </div>
+                <div className="gap">
+                    <div className="iconContent">
+                        <BsJoystick className = "clubIcons joyStick"/>
+                        <p className="exp">Start a New Club</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className = "headContainer">
+            <h2 className="info">Tribe offers a <span className="larger">platform</span></h2>
+            <h2 className='info'>where Langara students rebase offline experiences <span className="larger">online</span></h2>
+        </div>
+        <div className = "headContainer">
+            <ul>
+                <li>Enjoy your <span className="larger">Member-Only</span> online club space </li>
+                <li>Announce <span className="larger">Next Events</span> in club group chat</li>
+                <li><span className="larger">Create</span>a new club for any interest and hobby</li>
+                <li><span className="larger">Recruit</span> new members and <span className="larger">Advertise </span>your club online</li>
+            </ul>
+            
+        </div>
+        <div className="Link">
+            <p>Go to Clubs</p>
+            <FcRight className="arrow"/>
         </div>
     </div>
 );

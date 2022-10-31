@@ -1,8 +1,8 @@
 // Circles component for icon circles
 // Need to find out a way to return correct icons depending on the parameter passed through obj literal
-import { SiGoogleclassroom, SiAirtable, SiAlgolia, SiAmazons3, SiAndela } from "react-icons/si";
-import { HiGlobeAlt } from "react-icons/hi2";
-import { IoIosGlobe, IoMdBrush, IoMdGlobe, IoMdToday, IoIosAmericanFootball, IoIosChatboxes, IoMdLaptop, IoMdPaper } from "react-icons/io";
+
+
+import { IoIosAmericanFootball, IoMdLaptop, IoMdPaper } from "react-icons/io";
 import { HiAnnotation } from "react-icons/hi";
 
 import DisplayArea from "./DisplayArea";

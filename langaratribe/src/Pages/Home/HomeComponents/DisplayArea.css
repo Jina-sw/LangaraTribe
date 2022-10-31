@@ -146,3 +146,129 @@
     margin: 0 auto;
     margin-top: 3vw;
 }
+
+/*
+    Clubs section
+*/
+
+.option {
+    font-size: 5rem;
+}
+
+.headContainer {
+    padding : 3rem;
+    padding-left : 0rem;
+}
+
+.clubIcons {
+    width: 6rem;
+    height: 6rem;
+    color: black;
+}
+
+.iconContainer {
+    box-sizing: border-box;
+    
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconContent {
+    background-color : rgba(255, 255, 255, 0.6);
+    padding: 5rem;
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 15px;
+}
+
+.gap {
+
+    margin : 5rem;
+    
+}
+
+.door:hover {
+    color : rgb(89, 82, 82);
+    width : 8.5rem;
+    height: 8.5rem;
+    -webkit-transition: all 1s 0s ease;
+    -moz-transition: all 1s 0s ease;
+    -o-transition: all 1s 0s ease;
+    transition: all 1s 0s ease;
+}
+
+.joyStick:hover {
+    color : rgb(162, 157, 157);
+    width : 8.5rem;
+    height: 8.5rem;
+    -webkit-transition: all 1s 0s ease;
+    -moz-transition: all 1s 0s ease;
+    -o-transition: all 1s 0s ease;
+    transition: all 1s 0s ease;
+}
+
+.iconContent {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center
+}
+
+.exp {
+    width:fit-content;
+    font-size: 2rem;;
+    padding : 1rem;
+    
+}
+
+.info {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.larger {
+    font-size: 4rem;
+    color:#E8A598;
+}
+
+li {
+    font-size: 2.5rem;
+    padding: 1rem;
+    text-align:center;
+    list-style-type: none;
+    font-style: italic;
+}
+
+ul {
+    margin: 3rem;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.Link {
+    display:flex;
+    flex-direction:row;
+    justify-content: end;
+    font-size:2rem;
+    padding-right: 0rem;
+    text-decoration: underline;
+    padding: 2rem;
+}
+
+.Link:hover {
+    color:white;
+}
+
+.arrow {
+    width: 4rem;
+    height: 4rem;
+    padding-bottom: 2rem;;
+}
+
+
+
