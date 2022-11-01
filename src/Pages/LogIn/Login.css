@@ -11,8 +11,8 @@
 }
 
 .loginNavBack {
-    height: 3rem;
-    width: 3rem;
+    height: 5vw;
+    width: 5vw;
     margin-left: 3rem;
 }
 
@@ -80,7 +80,6 @@ body {
     background-color: #FEC89A;
     border-style: hidden;
     font-size: 2vw;
-    border-radius: 20%;
     width: 100%;
     padding: 2vw;
     cursor: pointer;

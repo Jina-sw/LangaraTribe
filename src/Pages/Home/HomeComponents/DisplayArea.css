@@ -164,6 +164,11 @@
     width: 6rem;
     height: 6rem;
     color: black;
+
+    -webkit-transition: all 1s 0s ease;
+    -moz-transition: all 1s 0s ease;
+    -o-transition: all 1s 0s ease;
+    transition: all 1s 0s ease;
 }
 
 .iconContainer {
@@ -185,29 +190,19 @@
 }
 
 .gap {
-
     margin : 5rem;
-    
 }
 
 .door:hover {
     color : rgb(89, 82, 82);
     width : 8.5rem;
     height: 8.5rem;
-    -webkit-transition: all 1s 0s ease;
-    -moz-transition: all 1s 0s ease;
-    -o-transition: all 1s 0s ease;
-    transition: all 1s 0s ease;
 }
 
 .joyStick:hover {
     color : rgb(162, 157, 157);
     width : 8.5rem;
     height: 8.5rem;
-    -webkit-transition: all 1s 0s ease;
-    -moz-transition: all 1s 0s ease;
-    -o-transition: all 1s 0s ease;
-    transition: all 1s 0s ease;
 }
 
 .iconContent {
