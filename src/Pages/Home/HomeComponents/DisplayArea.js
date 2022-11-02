@@ -1,4 +1,4 @@
-import { course, defaultState, Forum, Clubs } from './assetsComponent/displayTemplate';
+import { course, defaultState, Forum, Clubs, News } from './assetsComponent/displayTemplate';
 import "./DisplayArea.css";
 
 

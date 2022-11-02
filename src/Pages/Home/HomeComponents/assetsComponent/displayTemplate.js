@@ -7,6 +7,7 @@ import { AiFillQuestionCircle, AiOutlineQuestion } from "react-icons/ai";
 import { ImLoop, ImNext2, ImPlay2, ImPrevious2, ImShuffle } from "react-icons/im";
 import { FaPersonBooth } from "react-icons/fa";
 import { FcRight } from "react-icons/fc"
+import Slider from './Slider/Slider.js';
 
 
 export const course = (
@@ -194,7 +195,7 @@ export const Clubs = (
             <ul>
                 <li>Enjoy your <span className="larger">Member-Only</span> online club space </li>
                 <li>Announce <span className="larger">Next Events</span> in club group chat</li>
-                <li><span className="larger">Create</span>a new club for any interest and hobby</li>
+                <li><span className="larger">Create </span>a new club for any interest and hobby</li>
                 <li><span className="larger">Recruit</span> new members and <span className="larger">Advertise </span>your club online</li>
             </ul>
             
@@ -205,3 +206,9 @@ export const Clubs = (
         </div>
     </div>
 );
+
+export const News = (
+    <div>
+        <Slider />
+    </div>
+) 

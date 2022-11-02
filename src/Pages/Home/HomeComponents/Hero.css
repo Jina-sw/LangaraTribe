@@ -2,6 +2,7 @@
 .circleContainer {
     width: 90%;
     background-color: #E8A598;
+    border-radius: 30px;
     height: 30rem;
     margin: 0 auto;
     margin-top: 2rem;

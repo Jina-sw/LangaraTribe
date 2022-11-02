@@ -270,5 +270,13 @@ ul {
     padding-bottom: 2rem;;
 }
 
+/* 
+    News 
+*/
+
+.title {
+    text-align : center;
+    padding : 2rem;
+}
 
 
