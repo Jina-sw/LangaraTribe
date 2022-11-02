@@ -1,16 +1,19 @@
 import React, { useContext } from 'react';
-import { LoginContext } from '../App';
-import './Nav.css';
+import { Link } from 'react-router-dom';
+import { LoginContext } from './LoginContext';
 import { IoPersonOutline, IoTrailSignOutline } from "react-icons/io5"
+import {ImMenu} from "react-icons/im";
+import './Nav.css';
+
 const Nav = () => {
 
-    const isLoggedIn = useContext(LoginContext);
+    const { isLoggedIn } = useContext(LoginContext);
 
     const notLoggedIn = (
         <section className='signUpReq'>
             <span className='iconBox'>
                 <IoPersonOutline />
-                <p>Log In</p>
+                <p><Link to="/login"> Log In </Link></p>
             </span>
             <span className='iconBox'>
                 <IoTrailSignOutline />
@@ -22,12 +25,8 @@ const Nav = () => {
     const loggedIn = (
         <section className='signUpReq'>
             <span className='iconBox'>
-                <IoPersonOutline />
-                <p>Logged In</p>
-            </span>
-            <span className='iconBox'>
-                <IoTrailSignOutline />
-                <p>Logged In</p>
+                <ImMenu />
+                <p>Menu</p>
             </span>
         </section>
     );

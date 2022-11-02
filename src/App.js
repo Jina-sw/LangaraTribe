@@ -1,22 +1,24 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { LoginContext } from './Components/LoginContext';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Pages/Home/Home';
-
-export const LoginContext = React.createContext('');
+import LogIn from './Pages/LogIn/LogIn';
 
 export default function App() {
 
   const [isLoggedIn, setLoggedIn] = useState(false);
 
-  function toggleLogIn() {
-    setLoggedIn(!isLoggedIn);
-  }
-
   return (
-    <div className="App">
-      <LoginContext.Provider value={[isLoggedIn, setLoggedIn]}>
-        <Home></Home>
-      </LoginContext.Provider>
-    </div>
+    <LoginContext.Provider value={{ isLoggedIn, setLoggedIn }}>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path='login' element={<LogIn/>}/>
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </LoginContext.Provider>
   );
 }
