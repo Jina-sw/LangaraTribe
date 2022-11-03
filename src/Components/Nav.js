@@ -2,18 +2,22 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { LoginContext } from './LoginContext';
 import { IoPersonOutline, IoTrailSignOutline } from "react-icons/io5"
-import {ImMenu} from "react-icons/im";
+import { ImMenu } from "react-icons/im";
 import './Nav.css';
 
 const Nav = () => {
 
-    const { isLoggedIn } = useContext(LoginContext);
+    const { isLoggedIn, setLoggedIn } = useContext(LoginContext);
+
+    function callNavBar() {
+        document.getElementsByClassName("menuSlide")[0].style.transform = 'translateX("1000px")';
+    };
 
     const notLoggedIn = (
         <section className='signUpReq'>
             <span className='iconBox'>
                 <IoPersonOutline />
-                <p><Link to="/login"> Log In </Link></p>
+                <p onClick={() => setLoggedIn(!isLoggedIn)}><Link to="/login"> Log In </Link></p>
             </span>
             <span className='iconBox'>
                 <IoTrailSignOutline />
@@ -26,7 +30,7 @@ const Nav = () => {
         <section className='signUpReq'>
             <span className='iconBox'>
                 <ImMenu />
-                <p>Menu</p>
+                <p onClick={callNavBar}>Menu</p>
             </span>
         </section>
     );

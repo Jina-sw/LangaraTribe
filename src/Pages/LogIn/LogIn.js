@@ -4,6 +4,7 @@ import { AiOutlineUserAdd } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import LoginNav from "./LoginNav";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 export default function LogIn() {
     const { isLoggedIn, setLoggedIn } = useContext(LoginContext);
@@ -37,7 +38,7 @@ export default function LogIn() {
                     <p>Forgot password?</p>
                 </div>
                 <section className="loginButton">
-                    <button onClick={() => setLoggedIn(!isLoggedIn)}>LOGIN</button>
+                    <button onClick={() => setLoggedIn(!isLoggedIn)}><Link to="/" exact="true">LOGIN</Link></button>
                 </section>
                 <section className="loginPageSignUp">
                     <p>Or Sign Up!</p>

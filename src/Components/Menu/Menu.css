@@ -1,0 +1,88 @@
+/**
+    CSS for slide menu
+*/
+
+.menuSlide {
+    position: fixed;
+    height: 100%;
+    width: 40vw;
+    top: 0;
+    right: 0px;
+    background-color: #474e53;
+    color: white;
+}
+
+.closeIcon,
+.logoutButton {
+    background-color: #474e53;
+    color: white;
+    border: hidden;
+    cursor: pointer;
+}
+
+.closeIcon {
+    height: 4vw;
+    width: 4vw;
+}
+
+.menuGridBox {
+    display: grid;
+    grid-template-columns: 4.5fr 1fr;
+    padding: 2vw;
+}
+
+.menuh1 {
+    text-align: center;
+    font-size: 6vw;
+    letter-spacing: 0.5vw;
+    margin-bottom: 5vw;
+}
+
+.menuList li {
+    font-size: 3.5vw;
+    letter-spacing: 0.3vw;
+    margin-bottom: 0.5vw;
+    cursor: pointer;
+}
+
+.menuDiv {
+    height: 1px;
+    background-color: black;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 2vw;
+}
+
+.logoutButton {
+    text-align: center;
+    font-size: 3vw;
+    letter-spacing: 0.3vw;
+}
+
+@media only screen and (min-width: 1350px) {
+
+    .closeIcon {
+        height: 2.5vw;
+        width: 2.5vw;
+    }
+
+    .menuh1 {
+        font-size: 4vw;
+        letter-spacing: 0.5vw;
+        margin-bottom: 2vw;
+    }
+
+    .menuList li {
+        font-size: 2vw;
+        margin-bottom: 0.2vw;
+    }
+
+    .menuDiv {
+        width: 30%;
+        margin-bottom: 1vw;
+    }
+
+    .logoutButton {
+        font-size: 1.5vw;
+    }
+}
