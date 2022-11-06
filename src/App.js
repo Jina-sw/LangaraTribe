@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Pages/Home/Home';
 import LogIn from './Pages/LogIn/LogIn';
+import Course from './Pages/Course/Course'
+
 
 export default function App() {
 
@@ -14,8 +16,9 @@ export default function App() {
       <div className="App">
         <BrowserRouter>
           <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route path='login' element={<LogIn/>}/>
+            <Route path="/" exact element={<Home />}/>
+            <Route path='login' element={<LogIn />}/>
+            <Route path='Course' element={<Course/>}/>
           </Routes>
         </BrowserRouter>
       </div>

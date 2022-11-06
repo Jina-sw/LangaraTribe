@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { LoginContext } from './LoginContext';
+import { LoginContext } from '../LoginContext';
 import { IoPersonOutline, IoTrailSignOutline } from "react-icons/io5"
 import { ImMenu } from "react-icons/im";
 import './Nav.css';

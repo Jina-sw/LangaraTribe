@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import Nav from "../../Components/Nav";
+import Nav from "../../Components/Nav/Nav";
 import { useContext } from "react";
 import { LoginContext } from "../../Components/LoginContext";
 import Hero from "./HomeComponents/Hero";

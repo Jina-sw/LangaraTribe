@@ -71,17 +71,17 @@
     .menuh1 {
         font-size: 4vw;
         letter-spacing: 0.5vw;
-        margin-bottom: 2vw;
+        margin-bottom: 1vw;
     }
 
     .menuList li {
         font-size: 2vw;
-        margin-bottom: 0.2vw;
+        margin-bottom: 0.1vw;
     }
 
     .menuDiv {
         width: 30%;
-        margin-bottom: 1vw;
+        margin-bottom: 0.5vw;
     }
 
     .logoutButton {

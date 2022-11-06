@@ -1,7 +1,7 @@
 // Circles component for icon circles
 // Need to find out a way to return correct icons depending on the parameter passed through obj literal
 
-
+import { Link } from 'react-router-dom';
 import { IoIosAmericanFootball, IoMdLaptop, IoMdPaper } from "react-icons/io";
 import { HiAnnotation } from "react-icons/hi";
 
@@ -37,7 +37,7 @@ const Circles = ({ id,icon,desc,setState}) => {
                     <p className="heroText">
                         {desc}
                     </p>
-                    <p><span>Click Here!</span></p>
+                    <p><span><Link to={`/${desc}`}>Click Here!</Link></span></p>
                 </div>
             </div>
         </div>
