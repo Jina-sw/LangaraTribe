@@ -4,11 +4,7 @@ import leftArrow from "./icons/left-arrow.svg";
 import rightArrow from "./icons/right-arrow.svg";
 
 export default function SideSlider(props) {
-    if (props.direction == "next") {
-        console.log("next");
-    } else {
-        console.log("prev");
-    }
+    
     return (
         <button 
          onClick={props.moveSlide}

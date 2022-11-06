@@ -8,7 +8,6 @@ import { HiAnnotation } from "react-icons/hi";
 import DisplayArea from "./DisplayArea";
 
 const Circles = ({ id,icon,desc,setState}) => {
-    //console.log(icons);
 
     let iconS = "";
     switch (icon){

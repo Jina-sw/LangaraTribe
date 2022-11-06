@@ -38,7 +38,7 @@ export default function LogIn() {
                     <p>Forgot password?</p>
                 </div>
                 <section className="loginButton">
-                    <button onClick={() => setLoggedIn(!isLoggedIn)}><Link to="/" exact="true">LOGIN</Link></button>
+                    <button onClick={() => setLoggedIn(!isLoggedIn)}><Link to="/">LOGIN</Link></button>
                 </section>
                 <section className="loginPageSignUp">
                     <p>Or Sign Up!</p>
