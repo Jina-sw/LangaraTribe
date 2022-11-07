@@ -1,0 +1,85 @@
+/**
+NoteBoard
+*/
+
+.header {
+    padding : 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h1 {
+    font-size : 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.icon {
+    width : 40px;
+    height : 40px;
+}
+
+.board {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/**
+StickyNote
+*/
+
+.Container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width : 500px;
+    height : 400px;
+    padding : 2rem;
+    background-color: rgba(244, 181, 71, 0.3);
+    box-sizing:border-box;
+    margin : 5rem;
+    
+}
+
+.imgContainer {
+    width : 400px;
+    height : 250px;
+    overflow : hidden;
+    border-radius:5%;
+    border-width: 10px;
+    
+}
+
+.frame {
+    width : 425px;
+    height : 275px;
+    background-color: rgba(244, 181, 71, 0.5);
+    border-radius: 5%;
+}
+
+.Text {
+    font-size : 20px;
+    padding: 1.5rem;
+    font-weight: bold;
+}
+
+.pin {
+    width: 25px;
+    height: 25px;
+    color: rgb(26, 15, 75);
+}
+
+
+
+
+
+
+
+
+
+

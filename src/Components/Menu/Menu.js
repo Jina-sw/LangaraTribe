@@ -42,7 +42,9 @@ const Menu = (props) => {
                         <div className="menuDiv"></div>
                     </li>
                     <li>
+                        <Link to='/Course'>
                         Course
+                        </Link>
                         <div className="menuDiv"></div>
                     </li>
                     <li>

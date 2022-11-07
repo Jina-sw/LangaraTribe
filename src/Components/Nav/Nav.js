@@ -34,10 +34,10 @@ const Nav = (props) => {
 
     return (
         <div className="navContainer">
-            <section className="logoContainer">
+            <Link to='/'><section className="logoContainer">
                 <p>Tribe.</p>
                 <p>Langara College.</p>
-            </section>
+            </section></Link>
             {isLoggedIn ? loggedIn : notLoggedIn}
         </div>
     );
