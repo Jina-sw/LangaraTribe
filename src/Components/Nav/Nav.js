@@ -18,7 +18,7 @@ const Nav = (props) => {
             </span>
             <span className='iconBox'>
                 <IoTrailSignOutline />
-                <p>Sign Up</p>
+                <p><Link to="/signup">Sign Up</Link></p>
             </span>
         </section>
     );

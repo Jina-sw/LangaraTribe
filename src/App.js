@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Pages/Home/Home';
 import LogIn from './Pages/LogIn/LogIn';
+import SignUp from './Pages/LogIn/SignUp';
 import Course from './Pages/Course/Course'
 import { useEffect } from 'react';
 
@@ -26,6 +27,7 @@ export default function App() {
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path='login' element={<LogIn />} />
+            <Route path='signup' element={<SignUp />} />
             <Route path='Course' element={<Course />} />
           </Routes>
         </BrowserRouter>

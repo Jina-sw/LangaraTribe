@@ -46,7 +46,7 @@ export default function LogIn() {
                     <button onClick={loginHandler}><Link to="/">LOGIN</Link></button>
                 </section>
                 <section className="loginPageSignUp">
-                    <p>Or Sign Up!</p>
+                    <p><Link to="/signup"> Or Sign Up!</Link></p>
                 </section>
             </form>
         </div>
