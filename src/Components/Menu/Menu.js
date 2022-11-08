@@ -18,6 +18,7 @@ const Menu = (props) => {
     function logOut() {
         exitButtonHandler();
         setLoggedIn(!isLoggedIn);
+        localStorage.setItem('login','false');
     };
 
     if(props.menuOpen){

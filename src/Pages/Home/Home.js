@@ -1,7 +1,5 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Nav from "../../Components/Nav/Nav";
-import { useContext } from "react";
-import { LoginContext } from "../../Components/LoginContext";
 import Hero from "./HomeComponents/Hero";
 import DisplayArea from "./HomeComponents/DisplayArea";
 import Menu from "../../Components/Menu/Menu";

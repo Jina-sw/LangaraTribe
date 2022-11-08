@@ -9,6 +9,11 @@ import { Link } from "react-router-dom";
 export default function LogIn() {
     const { isLoggedIn, setLoggedIn } = useContext(LoginContext);
 
+    function loginHandler() {
+        setLoggedIn(!isLoggedIn);
+        localStorage.setItem('login','true');
+    }
+
     return (
         <div>
             <LoginNav />
@@ -38,7 +43,7 @@ export default function LogIn() {
                     <p>Forgot password?</p>
                 </div>
                 <section className="loginButton">
-                    <button onClick={() => setLoggedIn(!isLoggedIn)}><Link to="/">LOGIN</Link></button>
+                    <button onClick={loginHandler}><Link to="/">LOGIN</Link></button>
                 </section>
                 <section className="loginPageSignUp">
                     <p>Or Sign Up!</p>
