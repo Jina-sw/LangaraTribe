@@ -1,0 +1,59 @@
+.contnr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+   
+}
+
+.Title {
+    width: 95rem;
+    height: 5rem;
+    font-size: 25px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.831);
+    border-radius: 10px;
+    padding: 2rem;
+    
+}
+
+.title_Forum {
+    margin: 2rem;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.57);
+    padding: 1rem;
+    border-radius: 10px;
+
+}
+
+
+.TextArea {
+    width: 95rem;
+    height: 60rem;
+    font-size: 18px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.801);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.textArea {
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.57);
+    padding: 1rem;
+    border-radius: 10px;
+
+}
+
+.btnCont {
+    text-align: right;
+    width: 95rem;
+}
+
+button {
+    padding: 1rem;
+    background-color: blanchedalmond;
+   
+    
+    font-weight: bold;
+}

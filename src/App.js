@@ -5,7 +5,10 @@ import './App.css';
 import Home from './Pages/Home/Home';
 import LogIn from './Pages/LogIn/LogIn';
 import SignUp from './Pages/LogIn/SignUp';
-import Course from './Pages/Course/Course'
+import Course from './Pages/Course/Course';
+import Forum from './Pages/Forum/Forum';
+import View from './Pages/Forum/View';
+import Compose from './Pages/Forum/Compose';
 import { useEffect } from 'react';
 
 
@@ -29,6 +32,9 @@ export default function App() {
             <Route path='login' element={<LogIn />} />
             <Route path='signup' element={<SignUp />} />
             <Route path='Course' element={<Course />} />
+            <Route path='Forum'  element={<Forum />} />
+            <Route path='/Forum/View' element={<View />} />
+            <Route path='/Forum/Compose' element={<Compose />} />
           </Routes>
         </BrowserRouter>
       </div>
