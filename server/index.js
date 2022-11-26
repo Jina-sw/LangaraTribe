@@ -1,11 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const router = express.Router();
 const cors = require('cors');
 
 const mongodb = "mongodb+srv://jina123:jinapassword@cluster0.y7pnsnz.mongodb.net/blog?retryWrites=true&w=majority"
 
 const app = express();
 const postModel = require('./models/post');
+const postRouter = require('./routes/postRouterjs');
 
 app.use(cors());
 app.use(express.json());
@@ -16,30 +18,34 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error"));
 
 
-app.post('/insert', async (req, res) => {
+app.use("/posts", postRouter);
 
-    const title = req.body.title;
-    const content = req.body.content;
+// http://localhost:5000/api/user
 
-    const post = new postModel({ title: title, content: content});
+// app.post('/insert', async (req, res) => {
 
-    try {
-        await post.save();
-        res.send("goodafternoon");
-    } catch(err) {
-        console.log(err)
-    }
-});
+//     const title = req.body.title;
+//     const content = req.body.content;
 
-app.get("/read", async (req, res) => {
-    postModel.find({}, (err, result) => {
-        if (err) {
-            res.send(err);
-        }
+//     const post = new postModel({ title: title, content: content});
 
-        res.send(result);
-    })
-})
+//     try {
+//         await post.save();
+//         res.send("goodafternoon");
+//     } catch(err) {
+//         console.log(err)
+//     }
+// });
+
+// app.get("/read", async (req, res) => {
+//     postModel.find({}, (err, result) => {
+//         if (err) {
+//             res.send(err);
+//         }
+
+//         res.send(result);
+//     })
+// })
 
 const PORT = 5000;
 

@@ -1,0 +1,28 @@
+const express = require('express');
+const router = express.Router();
+
+const postController = require("../controllers/postController");
+
+
+router.get("/", postController.getAllPosts);
+
+router.post("/post", postController.postAPost);
+
+router.put("/update/:id", postController.updatePost);
+
+router.get("/:id", postController.getById);
+
+router.delete("/:id", postController.deletePost)
+
+
+module.exports = router;
+
+// app.get("/read", async (req, res) => {
+//     postModel.find({}, (err, result) => {
+//         if (err) {
+//             res.send(err);
+//         }
+
+//         res.send(result);
+//     })
+// })

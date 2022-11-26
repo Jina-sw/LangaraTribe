@@ -193,7 +193,7 @@ export const Clubs = (
         </div>
         <div className = "headContainer">
             <ul>
-                <li>Enjoy your <span className="larger">Member-Only</span> online club space </li>
+                <li>Enjoy your <span className="larger">Members-Only</span> online club space </li>
                 <li>Announce <span className="larger">Next Events</span> in club group chat</li>
                 <li><span className="larger">Create </span>a new club for any interest and hobby</li>
                 <li><span className="larger">Recruit</span> new members and <span className="larger">Advertise </span>your club online</li>

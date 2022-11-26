@@ -6,23 +6,41 @@ import axios from 'axios'
 import { useEffect } from 'react';
 
 function Compose(props) {
+
     const [title, setTitle] = useState('');
-    const [content, setContent] = useState('');
-
-    useEffect(() => {
-        axios.get('http://localhost:5000/read')
-        .then((response)=>{
-            console.log(response)
-        })
-    }, [])
+        const [content, setContent] = useState('');
     
-    const addToDB = () => {
-        axios.post('http://localhost:5000/insert', {
-            title: title, 
-            content: content 
-        });
-    }
 
+        const addToDB = () => {
+            axios.post('http://localhost:5000/posts/post', {
+                title: title, 
+                content: content 
+            });
+        }
+    
+
+    return (
+        <div>
+            
+            <div className='contnr'>
+                <div className='btnCont'>
+                    <button onClick={addToDB}><Link to='/Forum/CommunityBoard'>Publish</Link></button>
+                </div>
+                
+                <div className='title_Forum'>
+                    <input type='text' placeholder=" Title" className='Title' name='title' onChange={(e) => setTitle(e.target.value)}/>
+                </div>
+                
+                <div className='textArea'>
+                    <textarea placeholder=' Share your Story' className='TextArea' name='content' onChange={(e) =>setContent(e.target.value)}></textarea>
+                </div>
+            </div>
+            
+        </div>
+    )
+}
+
+export default Compose;
 
     // async function submit() {
     //     const title = document.getElementsByName('title')[0].value.trim();
@@ -36,24 +54,3 @@ function Compose(props) {
 
     //     const data = { title: title, content: content};
     // }
-    return (
-        <div>
-            <Nav />
-            <div className='contnr'>
-                <div className='btnCont'>
-                    <button onClick={addToDB}><Link to='/'>Publish</Link></button>
-                </div>
-                
-                <div className='title_Forum'>
-                    <input type='text' placeholder=' Title' className='Title' name='title' onChange={(e) => {setTitle(e.target.value)}}/>
-                </div>
-                <div className='textArea'>
-                    <textarea placeholder=' Share your Story' className='TextArea' name='content' onChange={(e) => {setContent(e.target.value)}}></textarea>
-                </div>
-            </div>
-            
-        </div>
-    )
-}
-
-export default Compose;
