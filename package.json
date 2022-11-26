@@ -41,6 +41,8 @@
     ]
   },
   "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
+    "react-refresh": "^0.14.0",
     "react-router-dom": "^6.4.3"
   }
 }
