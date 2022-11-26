@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-const User = require('./user');
+const User = require('./Models/user');
 
 var app = express();
 //connect to mongo db
