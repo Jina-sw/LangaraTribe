@@ -21,10 +21,31 @@ export default function LogIn() {
         localStorage.setItem('login', 'true');
     }
 
+    const fetchLoginData = () => {
+        axios.get(url, {
+            params: {
+                username: values.username,
+                password: values.password
+            }
+        })
+    };
+
     const formSubmitHandler = (e) => {
         e.preventDefault();
-
+        if(values.username != "" && values.password != ""){
+            const result = fetchLoginData();
+            if(result == "loginSuccessful"){
+                loginHandler();
+                //redirect user to homepage
+            }else{
+                //Error message that includes result response
+            }
+        }else{
+            //Error Message props go here
+        };
     };
+
+
 
     return (
         <div>
@@ -39,7 +60,7 @@ export default function LogIn() {
                     </p>
                     <div className="inputPlaceHolder">
                         <AiOutlineUserAdd className="inputIcon" />
-                        <input type="text" name="username" placeholder="Type your username" onChange={(e) => setValue({...values, username: e.target.value})} />
+                        <input type="text" name="username" placeholder="Type your username" onChange={(e) => setValue({ ...values, username: e.target.value })} />
                     </div>
                 </section>
                 <section className="inputFields">
@@ -48,7 +69,7 @@ export default function LogIn() {
                     </p>
                     <div className="inputPlaceHolder second">
                         <RiLockPasswordLine className="inputIcon" />
-                        <input type="text" name="password" placeholder="Type your password" onChange={(e) => setValue({...values, password: e.target.value})}/>
+                        <input type="text" name="password" placeholder="Type your password" onChange={(e) => setValue({ ...values, password: e.target.value })} />
                     </div>
                 </section>
                 <div className="findPassword">
