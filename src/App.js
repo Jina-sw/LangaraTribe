@@ -35,8 +35,9 @@ export default function App() {
             <Route path='signup' element={<SignUp />} />
             <Route path='Course' element={<Course />} />
             <Route path='Forum'  element={<Forum />} />
-            <Route path='/Forum/CommunityBoard' element={<CommunityBoard />} />
             <Route path='/Forum/CommunityBoard/Compose' element={<Compose />} />
+            <Route path='/Forum/CommunityBoard' element={<CommunityBoard />} />
+            
 
            
           </Routes>

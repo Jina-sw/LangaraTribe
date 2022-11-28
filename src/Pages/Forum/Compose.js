@@ -1,4 +1,5 @@
 import { React, useState } from 'react';
+import { confirmAlert } from 'react-confirm-alert'
 import { Link } from 'react-router-dom'
 import Nav from '../../Components/Nav/Nav'
 import './Forum.css'
@@ -8,23 +9,40 @@ import { useEffect } from 'react';
 function Compose(props) {
 
     const [title, setTitle] = useState('');
-        const [content, setContent] = useState('');
+    const [content, setContent] = useState('');
+   
     
 
-        const addToDB = () => {
-            axios.post('http://localhost:5000/posts/post', {
+    const addToDB = () => {
+        axios.post('http://localhost:5000/posts/post', {
                 title: title, 
                 content: content 
-            });
+        });
+    }
+
+    const clickFunctions = () => {
+        if(window.confirm("Are you sure to publish your post?")){
+            console.log("yo");
+            addToDB();
+            alert("Successfully saved");
+            
+        } else {
+            alert("Cancelled publishing")
         }
+    }
+
+
+
+
     
 
     return (
         <div>
-            
+            <Nav/>
             <div className='contnr'>
                 <div className='btnCont'>
-                    <button onClick={addToDB}><Link to='/Forum/CommunityBoard'>Publish</Link></button>
+                    <button><Link to='/Forum/CommunityBoard'>Go Back</Link></button>
+                    <button onClick={clickFunctions}>publish</button>
                 </div>
                 
                 <div className='title_Forum'>

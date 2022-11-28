@@ -3,14 +3,24 @@ import axios from 'axios'
 import BoardList from './BoardList';
 
 
+
 function BoardPost(props) {
 
     
+    const [isOpen, setOpen] = useState(false);
+    
 
+    function setOpenChange () {
+
+      setOpen(!isOpen)
+    }
+    
+ 
 
     return(
         <div className="postCtn">
-            <div className="boardPost">{props.title}</div>
+            <button className="boardPost" onClick={setOpenChange} >{props.title}</button>
+            { isOpen? <div className="contentBox"><div className="content">{props.content}</div></div> : ""}
         </div>
         
         

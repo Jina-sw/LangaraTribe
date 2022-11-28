@@ -130,6 +130,28 @@ button:hover {
     width: 98%;
     padding: 0.2rem;
     margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentBox {
+    background-color: rgba(168, 99, 30, 0.682);
+    width: 98%;
+    min-height: 150px;
+    max-height: 500px;
+    padding: 2rem;
+    margin-bottom: 1rem;   
+}
+
+.content {
+    background-color: rgba(249, 248, 247, 0.682);
+    min-height: 110px;
+    max-height: 460px;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow: auto;
 }
 
 .boardPost {

@@ -1,4 +1,5 @@
 import { React, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import axios from 'axios'
 import Nav from '../../Components/Nav/Nav'
@@ -14,8 +15,9 @@ function CommunityBoard (props) {
     
     return(
         <div>
-            <Nav />
-            {isEditing ? <Compose isEditing={isEditing} setEdition={setEdition}/> : <BoardList isEditing={isEditing} setEdition={setEdition}/>}
+           
+            {isEditing ? <Link to="/Forum/CommunityBoard/Compose"><Compose isEditing={isEditing} setEdition={setEdition}/></Link> 
+            : <Link to="/Forum/CommunityBoard"><BoardList isEditing={isEditing} setEdition={setEdition}/></Link>}
             
         </div>
     )
