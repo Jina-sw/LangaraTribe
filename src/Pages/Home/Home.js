@@ -6,17 +6,16 @@ import Menu from "../../Components/Menu/Menu";
 
 const Home = () => {
     const [heroState, setState] = useState("default");
-    const [menuOpen, setMenuOpen] = useState(false);
 
 
     return (
         <div>
             <div>
-                <Nav setMenuOpen={setMenuOpen} menuOpen={menuOpen}/>
+                <Nav/>
                 <Hero setState={setState} />
                 <DisplayArea heroState={heroState} />
             </div>
-            <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+            {/* <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/> */}
         </div>
     );
 };

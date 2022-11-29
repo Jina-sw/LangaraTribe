@@ -1,7 +1,7 @@
 const User = require('../Models/user');
 const uuid = require('uuid');
 
-exports.signin = (req, res) => {
+exports.signin = (req, res, next) => {
     User.findOne({ username: req.body.username })
         .then(user => {
             console.log(user);
@@ -27,19 +27,6 @@ exports.signup = (req, res) => {
         username: req.body.username,
         password: req.body.password
     });
-
-    // User.findOne({username: req.body.username}).exec((err, foundUser)=> {
-    //     if(foundUser){
-    //         res.send("error!!");
-    //     }else{
-    //         user.save()
-    //         .then((result)=>{
-    //             res.send(result)
-    //         })
-    //         .catch((err)=>{
-    //             console.log(err);
-    //         })
-    //     }
 
     User.findOne({ username: req.body.username }).exec((err, foundUser) => {
         if (!foundUser) {

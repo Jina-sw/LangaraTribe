@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { LoginContext } from "../../Components/LoginContext";
+import { MenuContext } from "../../Components/MenuContext";
 import './Menu.css';
 
 import { AiOutlineClose } from 'react-icons/ai';
 
-const Menu = (props) => {
+const Menu = () => {
 
     const { isLoggedIn, setLoggedIn } = useContext(LoginContext);
+    const { menuOpen, setMenu } = useContext(MenuContext);
     const menuRef = document.getElementById('menu');
 
     function exitButtonHandler() {
-        props.setMenuOpen(!props.menuOpen);
+        setMenu(!menuOpen);
         menuRef.style.transform = "translateX(0px)";
     };
 
@@ -21,7 +23,7 @@ const Menu = (props) => {
         localStorage.setItem('login','false');
     };
 
-    if(props.menuOpen){
+    if(menuOpen){
         if(menuRef){
             menuRef.style.transform = "translateX(-1000px)";
         }

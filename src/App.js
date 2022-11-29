@@ -12,11 +12,13 @@ import Forum from './Pages/Forum/Forum';
 import Compose from './Pages/Forum/Compose';
 import { useEffect } from 'react';
 import CommunityBoard from './Pages/Forum/CommunityBoard';
+import { MenuContext } from './Components/MenuContext';
 
 
 export default function App() {
 
   const [isLoggedIn, setLoggedIn] = useState(false);
+  const [menuOpen, setMenu] = useState(false);
 
   useEffect(() => {
     const loginInfo = localStorage.getItem('login');
@@ -27,22 +29,24 @@ export default function App() {
 
   return (
     <LoginContext.Provider value={{ isLoggedIn, setLoggedIn }}>
-      <div className="App">
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route path='login' element={<LogIn />} />
-            <Route path='signup' element={<SignUp />} />
-            <Route path='Course' element={<Course />} />
-            <Route path='Forum'  element={<Forum />} />
-            <Route path='/Forum/CommunityBoard/Compose' element={<Compose />} />
-            <Route path='/Forum/CommunityBoard' element={<CommunityBoard />} />
-            
+      <MenuContext.Provider value={{ menuOpen, setMenu }}>
+        <div className="App">
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" exact element={<Home />} />
+              <Route path='login' element={<LogIn />} />
+              <Route path='signup' element={<SignUp />} />
+              <Route path='Course' element={<Course />} />
+              <Route path='Forum' element={<Forum />} />
+              <Route path='/Forum/CommunityBoard/Compose' element={<Compose />} />
+              <Route path='/Forum/CommunityBoard' element={<CommunityBoard />} />
 
-           
-          </Routes>
-        </BrowserRouter>
-      </div>
+
+
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </MenuContext.Provider>
     </LoginContext.Provider>
   );
 }

@@ -1,13 +1,16 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { LoginContext } from '../LoginContext';
+import { MenuContext } from '../MenuContext';
 import { IoPersonOutline, IoTrailSignOutline } from "react-icons/io5"
 import { ImMenu } from "react-icons/im";
 import './Nav.css';
+import Menu from '../Menu/Menu';
 
-const Nav = (props) => {
+const Nav = () => {
 
-    const { isLoggedIn} = useContext(LoginContext);
+    const { isLoggedIn } = useContext(LoginContext);
+    const { menuOpen, setMenu } = useContext(MenuContext);
 
 
     const notLoggedIn = (
@@ -27,7 +30,7 @@ const Nav = (props) => {
         <section className='signUpReq'>
             <span className='iconBox'>
                 <ImMenu />
-                <p onClick={() => props.setMenuOpen(!props.menuOpen)}>Menu</p>
+                <p onClick={() => setMenu(!menuOpen)}>Menu</p>
             </span>
         </section>
     );
@@ -39,6 +42,7 @@ const Nav = (props) => {
                 <p>Langara College.</p>
             </section></Link>
             {isLoggedIn ? loggedIn : notLoggedIn}
+            <Menu/>
         </div>
     );
 };

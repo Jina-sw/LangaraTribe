@@ -5,15 +5,17 @@ import { AiOutlineUserAdd } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import LoginNav from "./LoginNav";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 export default function LogIn() {
+
     const { isLoggedIn, setLoggedIn } = useContext(LoginContext);
+    const [errorMessage, setError] = useState("");
     const [values, setValue] = useState({
         username: "",
         password: ""
     });
-    const url = "localhost:3500/users/login";
+    const url = "http://localhost:3500/users/login";
 
 
     function loginHandler() {
@@ -21,27 +23,27 @@ export default function LogIn() {
         localStorage.setItem('login', 'true');
     }
 
-    const fetchLoginData = () => {
-        axios.get(url, {
-            params: {
-                username: values.username,
-                password: values.password
+    async function fetchLoginData() {
+
+        await axios.get(url, {
+            username: values.username,
+            password: values.password
+        }).then(res => {
+            if (res.message == "login succesful") {
+                loginHandler();
+                Navigate("/");
             }
-        })
+            setError(res.message);
+        }).catch(err => { console.log(err) });
     };
 
     const formSubmitHandler = (e) => {
         e.preventDefault();
-        if(values.username != "" && values.password != ""){
-            const result = fetchLoginData();
-            if(result == "loginSuccessful"){
-                loginHandler();
-                //redirect user to homepage
-            }else{
-                //Error message that includes result response
-            }
-        }else{
-            //Error Message props go here
+        setError("");
+        if (values.username != "" && values.password != "") {
+            fetchLoginData();
+        } else {
+            setError("Please check if the username or password field is left empty");
         };
     };
 
@@ -75,8 +77,10 @@ export default function LogIn() {
                 <div className="findPassword">
                     <p>Forgot password?</p>
                 </div>
+                <div id="errorDisplay">{errorMessage}</div>
                 <section className="loginButton">
-                    <button type="submit">LOGIN</button>
+                    {/* <button type="submit">LOGIN</button> */}
+                    <button onClick={() => setLoggedIn(!isLoggedIn)} ><Link to="/">LOGIN</Link></button>
                 </section>
                 <section className="loginPageSignUp">
                     <p><Link to="/signup"> Or Sign Up!</Link></p>
