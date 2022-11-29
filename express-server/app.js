@@ -16,7 +16,7 @@ var app = express();
 const mongoose = require('mongoose');
 
 const dbURL = "mongodb+srv://jaylee98:K6z1nqUKc7YnU8EG@cluster0.y7pnsnz.mongodb.net/cluster0?retryWrites=true&w=majority";
-mongoose.connect(dbURL)
+mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => app.listen(3500))
   .catch((err) => console.log(err));
 
@@ -26,13 +26,12 @@ const db = mongoose.connection;
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
