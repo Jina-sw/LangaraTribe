@@ -35,14 +35,14 @@
 
 .menuh1 {
     text-align: center;
-    font-size: 6vw;
-    letter-spacing: 0.5vw;
-    margin-bottom: 5vw;
+    font-size: 3vw;
+    letter-spacing: 0.3vw;
+    margin-bottom: 2vw;
 }
 
 .menuList li {
-    font-size: 3.5vw;
-    letter-spacing: 0.3vw;
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
     margin-bottom: 0.5vw;
     cursor: pointer;
 }
@@ -52,12 +52,12 @@
     background-color: black;
     width: 50%;
     margin: 0 auto;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
 }
 
 .logoutButton {
     text-align: center;
-    font-size: 3vw;
+    font-size: 2vw;
     letter-spacing: 0.3vw;
 }
 
@@ -69,7 +69,7 @@
     }
 
     .menuh1 {
-        font-size: 4vw;
+        font-size: 3vw;
         letter-spacing: 0.5vw;
         margin-bottom: 1vw;
     }
