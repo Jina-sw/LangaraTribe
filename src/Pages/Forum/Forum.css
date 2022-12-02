@@ -162,6 +162,7 @@ button:hover {
     font-size: 20px;
     width: 98%;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .ts {

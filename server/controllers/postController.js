@@ -39,15 +39,16 @@ exports.postAPost  = async (req, res) => {
 
 
 exports.updatePost = async (req, res, next) => {
-    const { title, description } = req.body;
-    const postId = req.params.id;
+    const title = req.body.title;
+    const content = req.body.content;
+    const postId = req.body.id;
     let post;
     
     try{
         post = await Post.findByIdAndUpdate(postId, {
             title,
             content
-        })
+        });
     } catch (err) {
         return console.log(err)
     }
@@ -55,7 +56,7 @@ exports.updatePost = async (req, res, next) => {
     if (!post) {
         return res.status(500).json({message: "Unable to update the post"})
     }
-    return res.status(200).json({post});
+    return res.status(200).json({message: "Updated! Please refresh the page"});
 }
 
 exports.getById = async (req, res, next) => {

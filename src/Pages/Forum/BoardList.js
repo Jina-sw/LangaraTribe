@@ -8,8 +8,6 @@ import Compose from './Compose';
 
 function BoardList(props) {
     const [posts, setPosts] = useState();
-    
-
 
     const request = async () => {
         const res = await axios.get('http://localhost:5000/posts')
@@ -21,8 +19,6 @@ function BoardList(props) {
     useEffect(()=>{
         request().then(data => setPosts(data.posts))
     },[])
-
-    console.log(posts);
 
     return(
         <div>
@@ -36,7 +32,7 @@ function BoardList(props) {
                         
                     </div>
                     <div>
-                        {posts && posts.map((post, index)=> (<BoardPost id={post.id} title={post.title} content={post.content} />))}
+                        {posts && posts.map((post, index)=> (<BoardPost id={post._id} title={post.title} content={post.content} setState={setPosts} currentState={posts}/>))}
                     </div>
                 </div>
             </div>
