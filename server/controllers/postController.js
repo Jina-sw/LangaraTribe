@@ -50,7 +50,8 @@ exports.updatePost = async (req, res, next) => {
             content
         });
     } catch (err) {
-        return console.log(err)
+        // return console.log(err)
+        console.log(err)
     }
 
     if (!post) {

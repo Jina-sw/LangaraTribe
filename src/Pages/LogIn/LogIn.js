@@ -4,8 +4,8 @@ import { LoginContext } from "../../Components/LoginContext";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 import LoginNav from "./LoginNav";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
-import { Link, Navigate } from "react-router-dom";
 
 export default function LogIn() {
 
@@ -16,25 +16,38 @@ export default function LogIn() {
         password: ""
     });
     const url = "http://localhost:3500/users/login";
+    const navigate = useNavigate();
 
 
     function loginHandler() {
-        setLoggedIn(!isLoggedIn);
+        setLoggedIn(true);
         localStorage.setItem('login', 'true');
     }
 
     async function fetchLoginData() {
 
-        await axios.get(url, {
-            username: values.username,
-            password: values.password
+        const username = values.username;
+        const pw = values.password;
+
+        await axios.post(url, {
+            username: username
         }).then(res => {
-            if (res.message == "login succesful") {
-                loginHandler();
-                Navigate("/");
+            console.log(res.data == {
+                message : "User does not exist"
+            });
+            console.log(res.data == "User does not exist");
+            if (res.data != "User does not exist") {
+                if (res.data == pw) {
+                    loginHandler();
+                    navigate("/");
+                    setError(res.data);
+                }else{
+                    setError("Wrong Password!");
+                }
+            } else {
+                setError(res.data);
             }
-            setError(res.message);
-        }).catch(err => { console.log(err) });
+        }).catch(err => { setError(err.response.data) });
     };
 
     const formSubmitHandler = (e) => {
@@ -46,7 +59,6 @@ export default function LogIn() {
             setError("Please check if the username or password field is left empty");
         };
     };
-
 
 
     return (
@@ -79,8 +91,7 @@ export default function LogIn() {
                 </div>
                 <div id="errorDisplay">{errorMessage}</div>
                 <section className="loginButton">
-                    {/* <button type="submit">LOGIN</button> */}
-                    <button onClick={() => setLoggedIn(!isLoggedIn)} ><Link to="/">LOGIN</Link></button>
+                    <button type="submit">LOGIN</button>
                 </section>
                 <section className="loginPageSignUp">
                     <p><Link to="/signup"> Or Sign Up!</Link></p>
