@@ -181,3 +181,16 @@ button:hover {
     left: 77%;
     margin-top: 2rem;
 }
+
+.editPost {
+    background-color: rgba(232, 150, 69, 0.716);
+    border-radius: 10%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+.submitPost {
+    background-color: rgb(232, 150, 69, 0.716);
+    border-radius: 5%;
+    padding: 0.2rem;
+    margin-bottom: 1rem;
+}
