@@ -32,15 +32,12 @@ export default function LogIn() {
         await axios.post(url, {
             username: username
         }).then(res => {
-            console.log(res.data == {
-                message : "User does not exist"
-            });
-            console.log(res.data == "User does not exist");
+            console.log(res.data.message);
             if (res.data != "User does not exist") {
-                if (res.data == pw) {
+                if (res.data.message == pw) {
                     loginHandler();
                     navigate("/");
-                    setError(res.data);
+                    setError(res.data.message);
                 }else{
                     setError("Wrong Password!");
                 }
