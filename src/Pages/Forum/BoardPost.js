@@ -58,15 +58,17 @@ function BoardPost(props) {
                 <label className='editBoxLabel'>Content:</label>
                 <input id='editBoxContent' type="text" onChange={(e) => setEdited({ ...editedContent, content: e.target.value })}></input>
             </div>
-            <button type='submit' onClick={editPostSubmit}>Submit</button>
+            <button type='submit' className='submitPost' onClick={editPostSubmit}>Submit</button>
         </form>
     );
 
     return (
         <div className="postCtn">
             <button className="boardPost" onClick={setOpenChange} >{props.title}</button>
-            {isEdit ? editInput : (isOpen ? <div className="contentBox"><div className="content">{props.content}</div></div> : "")}
-            <button className='boardPost' onClick={editPostHandler} >Edit Post</button>
+            <button className='editPost' onClick={editPostHandler} >Edit Post</button>
+            {isEdit ? editInput :
+             (isOpen ? <div className="contentBox"><div className="content">{props.content}</div></div> : "")}
+            
         </div>
 
 
