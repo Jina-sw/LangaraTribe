@@ -51,7 +51,7 @@ exports.signup = (req, res) => {
                 if (!foundUser2) {
                     user.save()
                         .then((result) => {
-                            res.send(result)
+                            res.send("Successful")
                         })
                         .catch((err) => {
                             console.log(err)

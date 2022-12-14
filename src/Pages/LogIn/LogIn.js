@@ -32,8 +32,7 @@ export default function LogIn() {
         await axios.post(url, {
             username: username
         }).then(res => {
-            console.log(res.data.message);
-            if (res.data != "User does not exist") {
+            if (res.data.message != "User does not exist") {
                 if (res.data.message == pw) {
                     loginHandler();
                     navigate("/");
