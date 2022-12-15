@@ -10,5 +10,7 @@ router.get('/', function(req,res,next){
 
 router.post('/login', userController.signin);
 router.post('/signup', userController.signup);
+router.get('/findpw/:username', userController.findpw);
+router.get('/finduser/:email', userController.finduser);
 
 module.exports = router;

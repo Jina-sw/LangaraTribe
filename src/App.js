@@ -7,6 +7,8 @@ import LogIn from './Pages/LogIn/LogIn';
 import SignUp from './Pages/LogIn/SignUp';
 import Course from './Pages/Course/Course';
 import Forum from './Pages/Forum/Forum';
+import FindPassword from './Pages/LogIn/FindPassword';
+import FindUsername from './Pages/LogIn/FindUsername';
 
 
 import Compose from './Pages/Forum/Compose';
@@ -40,8 +42,8 @@ export default function App() {
               <Route path='Forum' element={<Forum />} />
               <Route path='/Forum/CommunityBoard/Compose' element={<Compose />} />
               <Route path='/Forum/CommunityBoard' element={<CommunityBoard />} />
-
-
+              <Route path='findpw' element={<FindPassword/>}/>
+              <Route path='findusername' element={<FindUsername/>}/>
 
             </Routes>
           </BrowserRouter>

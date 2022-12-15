@@ -68,11 +68,14 @@ export default function LogIn() {
                     <p className="inputFieldHeader">
                         Username
                     </p>
-                    <div className="inputPlaceHolder">
+                    <div className="inputPlaceHolder second">
                         <AiOutlineUserAdd className="inputIcon" />
                         <input type="text" name="username" placeholder="Type your username" onChange={(e) => setValue({ ...values, username: e.target.value })} />
                     </div>
                 </section>
+                <div className="findPassword">
+                    <p><Link to="/findusername">Forgot username?</Link></p>
+                </div>
                 <section className="inputFields">
                     <p className="inputFieldHeader">
                         Password
@@ -83,7 +86,7 @@ export default function LogIn() {
                     </div>
                 </section>
                 <div className="findPassword">
-                    <p>Forgot password?</p>
+                    <p><Link to="/findpw">Forgot password?</Link></p>
                 </div>
                 <div id="errorDisplay">{errorMessage}</div>
                 <section className="loginButton">
