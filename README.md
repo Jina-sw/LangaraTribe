@@ -13,8 +13,8 @@
 # What It Does
 
 # Tech Stacks
-- React, JavaScript, CSS, Pug : building
-- Vercel : Deloyment
+- React, JavaScript, CSS, Pug 
+- Vercel
 
 # Accompliments we are proud of
 A group of two students made an app for their own school!
